@@ -442,6 +442,55 @@ body {
     color: var(--primary);
 }
 
+/* ===== FINGERWAVE GALLERY ===== */
+.fingerwave-gallery {
+    padding-top: 1rem;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 12px 35px rgba(60, 30, 20, 0.12);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
 /* ===== BOOKING SECTION ===== */
 .booking {
     padding: 6rem 0;
@@ -828,6 +877,14 @@ body {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 420px;
     }
 }
 
