@@ -359,6 +359,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
+            const expandableSection = target.closest('details');
+            if (expandableSection) {
+                expandableSection.open = true;
+            }
+
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
